@@ -7,13 +7,6 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-## usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|index:true,null:false,unique:true|
-|mail|string|null:false|
-
 ### Association
 - belongs_to :group
 - belongs_to :user
