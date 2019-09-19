@@ -1,22 +1,17 @@
-# README
-
 ## groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-
-## usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|index:true,null:false,unique:true|
-|mail|string|null:false|
+|title_id|integer|null: false, foreign_key: true|
+|author_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
+- belongs_to :title
+- belongs_to :author
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
