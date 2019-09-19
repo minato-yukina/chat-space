@@ -1,37 +1,21 @@
+# DB設計
+
 ## groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|title_id|integer|null: false, foreign_key: true|
-|author_id|integer|null: false, foreign_key: true|
+
+## coments_tweetsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|coment_id|integer|null: false, foreign_key: true|
+|tweet_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-- belongs_to :title
-- belongs_to :author
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- belongs_to :coment
+- belongs_to :tweet
