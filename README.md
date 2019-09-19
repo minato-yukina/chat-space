@@ -4,11 +4,8 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-<<<<<<< HEAD
 |title_id|integer|null: false, foreign_key: true|
 |author_id|integer|null: false, foreign_key: true|
-=======
->>>>>>> 275a5e1bf496692a354a28a07ab5b8574b3ab569
 
 ### Association
 - belongs_to :group
