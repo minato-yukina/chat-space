@@ -2,48 +2,43 @@
 
 ## groups_usersテーブル
 
-|Column|Type|Options|
+|Column|Type|association|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|through: :groups_users|
+|group_id|integer|through: :groups_users|
 
 ## groupsテーブル
 
-|Column|Type|Options|
+|Column|Type|association|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|created_at|integer|null: false, foreign_key: true|
-|updated_at|integer|null: false, foreign_key: true|
+|id|integer|-has_many: groups|
+|created_at|datetime|-has_many: groups|
+|updated_at|datetime|-has_many: groups|
 
 ## usersテーブル
 
-|Column|Type|Options|
+|Column|Type|association|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|created_at|integer|null: false, foreign_key: true|
-|updated_at|integer|null: false, foreign_key: true|
+|id|integer|-has_many: users|
+|created_at|datetime|-has_many: users|
+|updated_at|datetime|-has_many: users|
+|email|integer|-has_many: users|
 
 ## contentsテーブル
 
-|Column|Type|Options|
+|Column|Type|association|
 |------|----|-------|
-|created_at|integer|null: false, foreign_key: true|
-|update_at|integer|null: false, foreign_key: true|
-|group_name|integer|null: false, foreign_key: true|
+|created_at|datetime|-has_many: contents|
+|update_at|datetime|-has_many: contents|
+|group_name|integer|-has_many: contents|
 
 ## commentsテーブル
 
-|Column|Type|Options|
+|Column|Type|association|
 |------|----|-------|
-|send|integer|null: false, foreign_key: true|
-|image|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|created_at|integer|null: false, foreign_key: true|
-|updated_to|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
-- belongs_to :content
-- belongs_to :comment
+|send|integer|-has_many: comments|
+|image|integer|-has_many: comments|
+|user_id|integer|-has_many: comments|
+|group_id|integer|-has_many: comments|
+|created_at|datetime|-has_many: comments|
+|updated_to|datetime|-has_many: comments|
