@@ -17,8 +17,8 @@ belongs_to: user
 |updated_at|datetime|null: false|
 |name|integer|null: false|
 ### Association
+-has_many: messages
 -has_many: groups_users
-belongs_to: messages
 -has_many: users,through: :groups_users
 
 ## usersテーブル
@@ -41,4 +41,4 @@ belongs_to: messages
 |send|interger|null: false|
 |name|integer|null: false|
 ### Association
-belongs_to: user
+-has_many: user
