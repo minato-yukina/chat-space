@@ -12,10 +12,10 @@ belongs_to: user
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|created_at|datetime|null: false|
-|updated_at|datetime|null: false|
-|name|integer|null: false|
+|id|string|null: false|
+|created_at|string|null: false|
+|updated_at|string|null: false|
+|name|string|null: false|
 ### Association
 -has_many: messages
 -has_many: groups_users
@@ -25,10 +25,10 @@ belongs_to: user
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|created_at|datetime|null: false|
-|updated_at|datetime|null: false|
-|email|integer|null: false|
-|name|integer|null: false|
+|created_at|string|null: false|
+|updated_at|string|null: false|
+|email|string|null: false|
+|name|string|null: false|
 ### Association
 -has_many: messages
 -has_many: groups_users
@@ -37,9 +37,11 @@ belongs_to: user
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|interger|null: false|
+|image|string|null: false|
 |send|interger|null: false|
 |name|integer|null: false|
+|save|integer|null: false|
+|management|inreger|null: false|
 ### Association
--has_many: users
--has_many: groups
+belongs_to: group
+belongs_to: user
