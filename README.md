@@ -41,4 +41,5 @@ belongs_to: user
 |send|interger|null: false|
 |name|integer|null: false|
 ### Association
--has_many: user
+-has_many: users
+-has_many: groups
