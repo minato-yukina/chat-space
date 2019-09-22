@@ -23,8 +23,7 @@ belongs_to :user
 ### Association
 
 -has_many: users
--has_many: group_users
-through: :group_users
+-has_many: groups_users,through: :group_user
 
 
 ## usersテーブル
@@ -38,8 +37,9 @@ through: :group_users
 
 ### Association
 
-has_many: group
--has_many: comment
+-has_many: groups
+-has_many: comments
+-has_many: groups_users,through: :group_user
 
 ## contentsテーブル
 
@@ -67,5 +67,5 @@ belongs_to: content
 
 ### Association
 
-has_many: comment
--has_many: group
+-has_many: comments
+-has_many: groups
