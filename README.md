@@ -19,12 +19,12 @@ belongs_to :user
 |id|integer|
 |created_at|datetime|
 |updated_at|datetime|
+|name|integer|
 
 ### Association
 
 -has_many: users
--has_many: groups_users,through: :group_user
-
+-has_many: groups_users,through: :groups_users
 
 ## usersテーブル
 
@@ -34,12 +34,13 @@ belongs_to :user
 |created_at|datetime|
 |updated_at|datetime|
 |email|integer|
+|name|integer|
 
 ### Association
 
 -has_many: groups
 -has_many: comments
--has_many: groups_users,through: :group_user
+-has_many: groups_users,through: :groups_users
 
 ## contentsテーブル
 
@@ -52,7 +53,6 @@ belongs_to :user
 ### Association
 
 belongs_to: user
-belongs_to: content
 
 ## commentsテーブル
 
@@ -67,5 +67,4 @@ belongs_to: content
 
 ### Association
 
--has_many: comments
 -has_many: groups
