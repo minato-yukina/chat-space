@@ -1,37 +1,47 @@
-## groups_usersテーブル
+# DB設計
 
+## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|title_id|integer|null: false, foreign_key: true|
-|author_id|integer|null: false, foreign_key: true|
-
 ### Association
-- belongs_to :group
-- belongs_to :user
-- belongs_to :title
-- belongs_to :author
+belongs_to: group
+belongs_to: user
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|string|null: false|
+|created_at|string|null: false|
+|updated_at|string|null: false|
+|name|string|null: false|
+### Association
+-has_many: messages
+-has_many: groups_users
+-has_many: users,through: :groups_users
 
-Things you may want to cover:
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|created_at|string|null: false|
+|updated_at|string|null: false|
+|email|string|null: false|
+|name|string|null: false|
+### Association
+-has_many: messages
+-has_many: groups_users
+-has_many: groups,through: :groups_users
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string|null: false|
+|send|interger|null: false|
+|name|integer|null: false|
+|save|integer|null: false|
+|management|inreger|null: false|
+### Association
+belongs_to: group
+belongs_to: user
