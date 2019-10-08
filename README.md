@@ -18,8 +18,4 @@
 - belongs_to :group
 - belongs_to :user
 - belongs_to :coment
-<<<<<<< Updated upstream
 - belongs_to :tweet
-=======
-- belongs_to :tweet
->>>>>>> Stashed changes
