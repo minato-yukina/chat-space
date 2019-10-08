@@ -1,23 +1,23 @@
 .chat-main {
   width: calc(100vw - 300px);
   float: left;
-}
-.main-header {
-  height: 100px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid 1px #eeeeee;
-  overflow: scroll;
-}
-.main-header__left-box__current-group {
-  font-size: 20px;
-  color: #333333;
-  margin-bottom: 15px;
-  margin-top: 35px;
-}
-.main-header a {
-  color: #38aef0;
+  .main-header {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eeeeee;
+    overflow: scroll;
+    .main-header__left-box__current-group {
+      font-size: 20px;
+      color: #333333;
+      margin-bottom: 15px;
+      margin-top: 35px;
+    }
+    .main-header a {
+      color: #38aef0;
+    }
+  }
 }
 .main-header__edit-btn {
   height: 40px;
@@ -29,156 +29,151 @@
   right: 40px;
   color: #38aef0;
 }
+.main-header__right-box {
+  float: right;
+}
 .messages {
   height: calc(100vh - 282px);
   padding: 46px 40px;
   background-color: #fafafa;
   overflow: scroll;
+  .message {
+    padding-bottom: 40px;
+    .message__upper-info {
+      display: flex;
+      margin-bottom: 10px;
+      .message__upper-info__talker {
+        color: #434A54;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .message__upper-info__date {
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    .message__text {
+      color: #434a54;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+  .message {
+    padding-bottom: 40px;
+    .message__upper-info {
+      display: flex;
+      margin-bottom: 10px;
+      .message__upper-info__talker {
+        color: #434A54;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .message__upper-info__date {
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    .message__text {
+      color: #434A54;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
 }
-.message {
-  padding-bottom: 40px;
-}
-.message__upper-info {
-  display: flex;
-  margin-bottom: 10px;
-}
-.message__upper-info__talker {
-  color: #434A54;
-  font-size: 16px;
-  font-weight: bold;
-}
-.message__upper-info__date {
-  color: #999999;
-  font-size: 12px;
-  margin-left: 10px;
-}
-.message__text {
-  color: #434a54;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-.message {
-  padding-bottom: 40px;
-}
-.message__upper-info {
-  display: flex;
-  margin-bottom: 10px;
-}
-.message__upper-info__talker {
-  color: #434A54;
-  font-size: 16px;
-  font-weight: bold;
-}
-.message__upper-info__date {
-  color: #999999;
-  font-size: 12px;
-  margin-left: 10px;
-}
-.message__text {
-  color: #434A54;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
 .form {
   height: 49px;
   padding: 20px 40px;
   background-color: #ddd;
 }
-.form form {
-  display: flex;
+  .form form {
+    display: flex;
+  .input-box {
+    position: relative;
+    width: 100%;
+    padding: 0 165px 0 300px;
+    position: relative;
+    width: 100%;
+    .input-box__text {
+      height: 50px;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
+    }
+    .input-box__image {
+      font-size: 1.3rem;
+      position: absolute;
+      top: 0;
+      right: 0px;
+      cursor: pointer;
+    }
+    i.fa.fa-image {
+      padding-right: 10px;
+      .input-box__image__file {
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        color: initial;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        -webkit-appearance: textfield;
+        background-color: white;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        margin: 0em;
+        font: 400 11px system-ui;
+        padding: 1px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: initial;
+        border-image: initial;
+      }
+    }
+    .input-box__image__file {
+      display: none;
+    }    
+    .submit-btn {
+      width: 100px;
+      height: 50px;
+      padding: -30px 30px;
+      margin-left: 10px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
-input, textarea, select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-input, textarea, select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-.input-box {
-  position: relative;
-  width: 100%;
-  padding: 0 165px 0 300px;
-  position: relative;
-  width: 100%;
-}
-.input-box__text {
-  height: 50px;
-  width: 100%;
-  padding: 0 40px 0 10px;
-  color: #434a54;
-  border-style: none;
-}
-.input-box__image {
-  font-size: 1.3rem;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-input, textarea, select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-.input-box__image {
-  font-size: 1.3rem;
-  position: absolute;
-  top: 0;
-  right: 0px;
-  cursor: pointer;
-}
-.input-box__image__file {
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    -webkit-appearance: textfield;
-    background-color: white;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    margin: 0em;
-    font: 400 11px system-ui;
-    padding: 1px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;
-}
-.chat-main .form form .input-box__image {
-    font-size: 1.3rem;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-.submit-btn {
-  width: 100px;
-  height: 50px;
-  padding: -30px 30px;
-  margin-left: 10px;
-  background-color: #38aef0;
-  color: white;
-  cursor: pointer;
-}
-.input-box__image__file {
-  display: none;
-}
-ul {
-  list-style: none;
-}
-i.fa.fa-image {
-  padding-right: 10px;
-}
-.main-header__right-box {
-  float: right;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
