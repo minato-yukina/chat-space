@@ -1,0 +1,29 @@
+!!!
+%html{lang: "ja"}   
+  %head
+    %meta{ :content=>"text/html", :charset=>"utf-8" }
+    %title ChatSpace
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+  = yield
+.wrapper
+  .chat-side
+  test-user
+    .side-header
+    test-group
+    さようなら
+    .groups
+    sample-group
+    hello!
+    example
+  .chat-main
+  グループを作成しました
+    .main-header
+    test-group
+    .messages
+    test-user
+    こんにちは！
+    .from
+    type a message
