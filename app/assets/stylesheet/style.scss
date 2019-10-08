@@ -109,8 +109,10 @@
       right: 0px;
       cursor: pointer;
     }
-    i.fa.fa-image {
+    i {
+    &.fa.fa-image {
       padding-right: 10px;
+    }
       .input-box__image__file {
         -webkit-writing-mode: horizontal-tb !important;
         text-rendering: auto;
@@ -148,32 +150,5 @@
       cursor: pointer;
     }
   }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
