@@ -5,6 +5,19 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+- belongs_to :coment
+- belongs_to :tweet
+
+## coments_tweetsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|coment_id|integer|null: false, foreign_key: true|
+|tweet_id|integer|null: false, foreign_key: true|
+
 ### Association
 belongs_to: group
 belongs_to: user
@@ -16,6 +29,7 @@ belongs_to: user
 |created_at|string|null: false|
 |updated_at|string|null: false|
 |name|string|null: false|
+
 ### Association
 -has_many: messages
 -has_many: groups_users
@@ -29,6 +43,7 @@ belongs_to: user
 |updated_at|string|null: false|
 |email|string|null: false|
 |name|string|null: false|
+
 ### Association
 -has_many: messages
 -has_many: groups_users
@@ -42,6 +57,7 @@ belongs_to: user
 |name|integer|null: false|
 |save|integer|null: false|
 |management|inreger|null: false|
+
 ### Association
 belongs_to: group
 belongs_to: user
