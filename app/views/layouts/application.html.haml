@@ -4,8 +4,10 @@
     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
     %title ChatSpaceSample
     %meta{content: "authenticity_token", name: "csrf-param"}/
-    %link{"data-turbolinks-track": "reload", href: "style.css", media: "all", rel: "stylesheet"}/
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %script{"data-turbolinks-track": "reload", src: "/assets/application-92a91cf5753a538c5407a46c726acab43576fb46358ffa8a7ee0ee0719aa2f51.js"}
- 
   %body
+    = render 'layouts/notifications'
     = yield
