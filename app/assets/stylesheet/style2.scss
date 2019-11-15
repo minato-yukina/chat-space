@@ -69,6 +69,10 @@ ul {
   width: 260px;
   .group {
     margin-bottom: 40px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
     p {
     &.group__group-name {
       font-weight: bold;
