@@ -31,8 +31,9 @@
           .chat-group-user.clearfix.js-chat-member
             =user.name
             %input{name: "group[user_ids][]", type: "hidden", value: user.id}
-         
             %class.chat-group-form__field--right__remove{ data: { user: { id: user.id, name: user.name } } } 削除
+              
+              
            
   .chat-group-form__field.clearfix   
     .chat-group-form__field--right
