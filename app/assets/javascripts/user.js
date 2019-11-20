@@ -1,8 +1,8 @@
 $(function() {
   function  addUser(user){
     let html = `
-      <div class="chat-group-form__field--right">
-        <p class="chat-group-form__input">${user.name}</p>
+      <div class="chat-group-user clearfix">
+        <p class="chat-group-user__name">${user.name}</p>
         <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
       </div>     
     `;
@@ -10,19 +10,19 @@ $(function() {
   }
   function addNoUser(){
     let html = `
-      <div class="chat-group-form__field--right">
-        <p class="chat-group-form__input">ユーザーが見つかりません</p>
+      <div class="chat-group-user clearfix">
+        <p class="chat-group-user__name">一致するユーザーが見つかりません</p>
       </div>
     `;
     $("#user-search-result").append(html);
   }
   function addDeleteUser(name, id) {
     let html = `
-    <div class="chat-group-form__field--right" id="${id}">
+    <div class="chat-group-user clearfix" id="${id}">
       <input name='group[user_ids][]' type='hidden' value='${id}'>  
-      <p class="chat-group-form__input">${name}</p>
-      <div class="chat-group-form__field--right__remove chat-group-form__field--right__button" data-user-id="${id}" data-user-name="${name}">削除</div>
-    </div>`;
+      <p class="chat-group-user__name">${name}</p>
+      <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${name}">削除</div>
+    </div>`;//chat-group-form__field--right__remove chat-group-form__field--right__button
     $(".js-add-user").append(html);
   }
   // function addMember(userId) {
@@ -53,18 +53,18 @@ $(function() {
       alert("ユーザー検索に失敗しました");
     })
   })
-  $(".chat-group-form__field--right").on("click", ".chat-group-user__btn--add", function() {
+  $(document).on("click", ".chat-group-user__btn--add", function() {
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
       .parent()
       .remove();
     addDeleteUser(userName, userId);
-    // addMember(userId);
+    addMember(userId);
   });
-  $(".chat-group-form__field--right").on("click", ".chat-group-form__field--right__remove", function() {
+  $(document).on("click", ".chat-group-user__btn--remove", function() {
     $(this)
       .parent()
       .remove();
-    });
+  });
 });
