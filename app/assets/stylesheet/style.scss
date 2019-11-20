@@ -7,7 +7,6 @@
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px #eeeeee;
-    overflow: scroll;
     .main-header__left-box__current-group {
       font-size: 20px;
       color: #333333;
@@ -150,4 +149,21 @@
       cursor: pointer;
     }
   }
+}
+.upper-message {
+  display: flex;
+}
+.upper-message__user-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #434A54;
+}
+.upper-message__date {
+  font-size: 12px;
+  color: #999999;
+  padding-left: 10px;
+}
+.lower-message__content {
+  font-size: 14px;
+  color: #434A54;
 }
